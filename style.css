@@ -76,3 +76,40 @@ footer {
   font-weight: bold;
   color: #333;
 }
+
+
+
+.timeline-section {
+  background: #fff;
+  padding: 3rem 1rem;
+  color: #444;
+}
+
+.timeline-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.timeline-section h2 {
+  font-size: 2rem;
+  color: #9b6f46;
+  margin-bottom: 2rem;
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+}
+
+.timeline-item .date {
+  display: block;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #6c584c;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item .event {
+  font-size: 1rem;
+  line-height: 1.6;
+}

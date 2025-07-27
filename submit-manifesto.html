@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit Your Manifesto – Betterdays Foundation</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f7f8;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    h1 {
+      text-align: center;
+      color: #222;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    p {
+      text-align: center;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #0055aa;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #003f88;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Submit Your Life Manifesto</h1>
+    <p>At Betterdays Foundation, we believe in building from within. Share your voice.</p>
+    <form action="https://formsubmit.co/el/hiwaha" method="POST">
+      <input type="hidden" name="_subject" value="New Manifesto Submission">
+      <input type="hidden" name="_captcha" value="false">
+      <label for="name">Full Name</label>
+      <input type="text" name="Full Name" id="name" placeholder="Your Full Name" required>
+      
+      <label for="manifesto">Your Manifesto</label>
+      <textarea name="Manifesto" id="manifesto" rows="10" placeholder="Write your life manifesto..." required></textarea>
+      
+      <button type="submit">Submit Manifesto</button>
+    </form>
+    <div class="footer">
+      &copy; 2025 Betterdays Foundation. Your story matters.
+    </div>
+  </div>
+</body>
+</html>

@@ -61,7 +61,6 @@
       background-color: #333;
     }
 
-    /* Animations */
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
@@ -106,14 +105,20 @@
   </header>
 
   <!-- Hero Section -->
-  <header class="fade-in">
-    <h1>Submit Your Manifesto</h1>
-    <p>Every story matters. Your words can heal, inspire, and shine light for others.</p>
+  <header class="fade-in" style="text-align: center; padding: 40px 20px;">
+    <h1 style="font-family: 'Playfair Display', serif;">Submit Your Manifesto</h1>
+    <p style="font-family: 'Open Sans', sans-serif;">Every story matters. Your words can heal, inspire, and shine light for others.</p>
   </header>
 
   <!-- Manifesto Form Section -->
   <section class="form-container">
     <form action="https://formsubmit.co/el/hiwaha" method="POST">
+      <!-- Hidden Fields -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_subject" value="New Manifesto Submission">
+      <input type="hidden" name="_next" value="https://betterdaysfoundation.vercel.app/thank-you.html">
+
       <div class="form-group">
         <label for="name">Your Name</label>
         <input type="text" id="name" name="name" placeholder="Betterdays James" required />
@@ -139,22 +144,20 @@
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer fade-in">
-    <div class="container">
-      <p class="quote">“Your voice matters. Your story lights the path for others.”</p>
+  <footer class="site-footer fade-in" style="background-color: #a57335; padding: 40px 20px; text-align: center; color: white;">
+    <p class="quote" style="font-style: italic; font-size: 18px;">“Your voice matters. Your story lights the path for others.”</p>
 
-      <div class="footer-links">
-        <a href="mailto:betterdaysfoundation@gmail.com">Email</a>
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-      </div>
-
-      <p class="credit">© 2025 Betterdays Foundation. Made with ❤️ by Kasky.</p>
+    <div class="footer-links" style="margin: 20px 0;">
+      <a href="mailto:betterdaysfoundation@gmail.com" style="margin: 0 15px; color: white; text-decoration: none;">Email</a>
+      <a href="#" style="margin: 0 15px; color: white; text-decoration: none;">Facebook</a>
+      <a href="#" style="margin: 0 15px; color: white; text-decoration: none;">Instagram</a>
     </div>
+
+    <p class="credit">© 2025 Betterdays Foundation. Made with ❤️ by Kasky.</p>
   </footer>
 
+  <!-- Fade-in JS -->
   <script>
-    // Smooth fade-in on scroll
     const fadeInSections = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

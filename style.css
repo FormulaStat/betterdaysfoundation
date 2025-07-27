@@ -45,3 +45,34 @@ footer {
   color: #777;
   padding: 30px 20px;
 }
+
+
+
+.cta-section {
+  background: #faf7f2;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #4b3f30;
+}
+
+.cta-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #9b6f46;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.closing-line {
+  font-weight: bold;
+  color: #333;
+}

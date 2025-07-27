@@ -6,6 +6,93 @@
   <title>Submit Your Manifesto – Betterdays Foundation</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .form-container {
+      background: #f5f5f5;
+      padding: 30px;
+      max-width: 600px;
+      margin: 40px auto;
+      border-left: 4px solid #e3b04b;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.07);
+      animation: fadeInUp 1s ease;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      transition: border 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #e3b04b;
+      outline: none;
+    }
+
+    button[type="submit"] {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #333;
+    }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 20px;
+        margin: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -19,42 +106,40 @@
   </header>
 
   <!-- Hero Section -->
-  <header>
+  <header class="fade-in">
     <h1>Submit Your Manifesto</h1>
     <p>Every story matters. Your words can heal, inspire, and shine light for others.</p>
   </header>
 
   <!-- Manifesto Form Section -->
-  <section class="section fade-in">
-    <div class="message">
-      <form action="https://formsubmit.co/el/hiwaha" method="POST">
-        <div class="form-group">
-          <label for="name"><strong>Your Name</strong></label><br>
-          <input type="text" id="name" name="name" placeholder="Betterdays James" required />
-        </div>
+  <section class="form-container">
+    <form action="https://formsubmit.co/el/hiwaha" method="POST">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Betterdays James" required />
+      </div>
 
-        <div class="form-group">
-          <label for="email"><strong>Your Email</strong></label><br>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required />
-        </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+      </div>
 
-        <div class="form-group">
-          <label for="title"><strong>Title of Your Manifesto</strong></label><br>
-          <input type="text" id="title" name="title" placeholder="Born Through the Storm" required />
-        </div>
+      <div class="form-group">
+        <label for="title">Title of Your Manifesto</label>
+        <input type="text" id="title" name="title" placeholder="Born Through the Storm" required />
+      </div>
 
-        <div class="form-group">
-          <label for="manifesto"><strong>Your Manifesto</strong></label><br>
-          <textarea id="manifesto" name="message" rows="10" placeholder="Write your truth here..." required></textarea>
-        </div>
+      <div class="form-group">
+        <label for="manifesto">Your Manifesto</label>
+        <textarea id="manifesto" name="message" rows="6" placeholder="Write your truth here..." required></textarea>
+      </div>
 
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+      <button type="submit">Submit</button>
+    </form>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="site-footer fade-in">
     <div class="container">
       <p class="quote">“Your voice matters. Your story lights the path for others.”</p>
 
@@ -68,6 +153,19 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Smooth fade-in on scroll
+    const fadeInSections = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeIn 1s ease forwards';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeInSections.forEach(section => observer.observe(section));
+  </script>
 </body>
 </html>

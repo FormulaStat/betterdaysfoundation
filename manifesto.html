@@ -5,14 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Manifesto – James C. Izuchukwu</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .manifesto-container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-family: 'Segoe UI', sans-serif;
+      color: #1a1a1a;
+    }
+
+    .manifesto-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #1a1a1a;
+    }
+
+    .manifesto-container p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .signature {
+      margin-top: 40px;
+      text-align: right;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #1a1a1a;
+    }
+
+    .signature em {
+      display: block;
+      font-style: italic;
+      font-weight: normal;
+      font-size: 1rem;
+      margin-top: 4px;
+    }
+
+    nav a {
+      font-size: 1rem;
+      padding: 0 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00aaff;
+    }
+
+    @media screen and (max-width: 768px) {
+      .manifesto-container {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      .manifesto-container h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header style="background-color: #1a1a1a; padding: 20px; text-align: center;">
-  <nav>
-    <a href="index.html" style="color: white; margin-right: 30px; text-decoration: none; font-weight: bold;">Home</a>
-    <a href="manifesto.html" style="color: white; margin-right: 30px; text-decoration: none; font-weight: bold;">Manifesto</a>
-    <a href="submit-manifesto.html" style="color: white; text-decoration: none; font-weight: bold;">Submit Manifesto</a>
-  </nav>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="submit-manifesto.html">Submit Manifesto</a>
+    </nav>
   </header>
 
   <div class="manifesto-container">

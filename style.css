@@ -174,3 +174,40 @@ footer {
   color: #8b5e3c;
   box-shadow: 0 0 8px #ffe3a3;
 }
+
+
+
+
+.site-footer {
+  background-color: #8b5e3c;
+  color: #fff7e6;
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+.site-footer .quote {
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #ffeecf;
+}
+
+.footer-links {
+  margin-bottom: 1.2rem;
+}
+
+.footer-links a {
+  margin: 0 0.8rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.site-footer .credit {
+  font-size: 0.85rem;
+  color: #e0cfa3;
+}

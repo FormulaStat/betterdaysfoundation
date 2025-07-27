@@ -113,3 +113,64 @@ footer {
   font-size: 1rem;
   line-height: 1.6;
 }
+
+
+
+.light-wall {
+  background: #f9f6f1;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.light-wall h2 {
+  font-size: 2rem;
+  color: #8b5e3c;
+  margin-bottom: 0.5rem;
+}
+
+.light-wall p {
+  color: #5c4a3a;
+  margin-bottom: 1.5rem;
+}
+
+#nameForm {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+#nameInput {
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #d2b48c;
+  border-radius: 5px;
+  min-width: 200px;
+}
+
+#nameForm button {
+  padding: 0.7rem 1.2rem;
+  background-color: #8b5e3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#nameList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.name-list span {
+  background: #fff7e6;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  color: #8b5e3c;
+  box-shadow: 0 0 8px #ffe3a3;
+}

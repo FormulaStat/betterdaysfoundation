@@ -2,113 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Submit Your Manifesto – Betterdays Foundation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .manifesto-form-section {
-      background: #faf7f2;
-      padding: 3rem 1rem;
-      color: #4b3f30;
-      text-align: center;
-    }
-
-    .manifesto-form-container {
-      max-width: 700px;
-      margin: 0 auto;
-      background: #fffefb;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(139, 94, 60, 0.1);
-      text-align: left;
-    }
-
-    .manifesto-form-container h1 {
-      font-family: 'Playfair Display', serif;
-      color: #9b6f46;
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .manifesto-form-container p {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #5c4a3a;
-    }
-
-    form label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 0.5rem;
-      color: #6c584c;
-    }
-
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1.5rem;
-      border: 1px solid #d2b48c;
-      border-radius: 5px;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 1rem;
-    }
-
-    form textarea {
-      resize: vertical;
-      min-height: 180px;
-    }
-
-    form button {
-      width: 100%;
-      background: #8b5e3c;
-      color: #fff;
-      padding: 0.9rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    form button:hover {
-      background: #704a2f;
-    }
-  </style>
 </head>
 <body>
 
-  <section class="manifesto-form-section">
-    <div class="manifesto-form-container">
-      <h1>Submit Your Life Manifesto</h1>
-      <p>At Betterdays Foundation, your truth has power. Share your voice, your story, your fire.</p>
+  <!-- Navigation -->
+  <header style="background-color: #1a1a1a; padding: 20px; text-align: center;">
+    <nav>
+      <a href="index.html" style="color: white; margin-right: 30px; text-decoration: none; font-weight: bold;">Home</a>
+      <a href="manifesto.html" style="color: white; margin-right: 30px; text-decoration: none; font-weight: bold;">Manifesto</a>
+      <a href="submit-manifesto.html" style="color: white; text-decoration: none; font-weight: bold;">Submit Manifesto</a>
+    </nav>
+  </header>
 
+  <!-- Hero Section -->
+  <header>
+    <h1>Submit Your Manifesto</h1>
+    <p>Every story matters. Your words can heal, inspire, and shine light for others.</p>
+  </header>
+
+  <!-- Manifesto Form Section -->
+  <section class="section fade-in">
+    <div class="message">
       <form action="https://formsubmit.co/el/hiwaha" method="POST">
-        <input type="hidden" name="_subject" value="New Manifesto Submission from Betterdays Foundation">
-        <input type="hidden" name="_captcha" value="false">
+        <div class="form-group">
+          <label for="name"><strong>Your Name</strong></label><br>
+          <input type="text" id="name" name="name" placeholder="Betterdays James" required />
+        </div>
 
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="Full Name" placeholder="Enter your name..." required>
+        <div class="form-group">
+          <label for="email"><strong>Your Email</strong></label><br>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
 
-        <label for="manifesto">Your Manifesto</label>
-        <textarea id="manifesto" name="Manifesto" placeholder="Write your life manifesto..." required></textarea>
+        <div class="form-group">
+          <label for="title"><strong>Title of Your Manifesto</strong></label><br>
+          <input type="text" id="title" name="title" placeholder="Born Through the Storm" required />
+        </div>
 
-        <button type="submit">Submit Manifesto</button>
+        <div class="form-group">
+          <label for="manifesto"><strong>Your Manifesto</strong></label><br>
+          <textarea id="manifesto" name="message" rows="50" placeholder="Write your truth here..." required></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
       </form>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="quote">"Born in fire, destined to rise in light."</div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="manifesto.html">My Manifesto</a>
-      <a href="submit-manifesto.html">Submit Yours</a>
+    <div class="container">
+      <p class="quote">“Your voice matters. Your story lights the path for others.”</p>
+
+      <div class="footer-links">
+        <a href="mailto:betterdaysfoundation@gmail.com">Email</a>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+      </div>
+
+      <p class="credit">© 2025 Betterdays Foundation. Made with ❤️ by Kasky.</p>
     </div>
-    <div class="credit">&copy; 2025 Betterdays Foundation. Built with resilience.</div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
